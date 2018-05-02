@@ -1,9 +1,31 @@
 <template>
     <div class="slide-container">
+      <p>HTML 写法</p>
+      <e-highlight type="html" code='<my-slider :images="pics" :auto="auto"></my-slider>'/>
+      <p>参数说明</p>
+      <e-highlight
+        code="
+   /**
+   * 参数说明
+   * 参数     说明            类型           可选值                    默认值
+   * images   轮播图图片      Array           —                         []
+   * loop    是否循环播放     Boolean          -                         true
+   * auto   是否自动播放      Boolean          -                         true
+   * delay    轮播延时        Number          -                           5000
+   */"/>
+      <p>运行例子</p>
       <my-slider :images="pics" :auto="auto"></my-slider>
     </div>
 </template>
 <script>
+  /**
+   * 参数说明
+   * 参数     说明            类型           可选值                    默认值
+   * images   轮播图图片      Array           —                         []
+   * loop    是否循环播放     Boolean          -                         true
+   * auto   是否自动播放      Boolean          -                         true
+   * delay    轮播延时        Number          -                           5000
+   */
   export default {
     data() {
       return {
@@ -28,7 +50,7 @@
 <style lang="scss" scoped>
   .slide-container{
     height: 188px;
-    width: 100%;
+    /*width: 100%;*/
     text-align: left;
   }
 </style>
