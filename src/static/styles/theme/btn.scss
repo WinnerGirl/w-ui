@@ -1,0 +1,28 @@
+.footer-btn{
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  height: 50px;
+}
+.footer-fix-btn{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: $c-main;
+  font-size: 16px;
+}
+.footer-absoult-btn{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: $c-main;
+  font-size: 16px;
+}

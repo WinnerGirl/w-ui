@@ -2,13 +2,13 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import skeleton from './skeleton';
 import title from './title';
-import identity from '../../security/stores/identity';
+// import identity from '../../security/stores/identity';
 
 Vue.use(Vuex);
 export default new Vuex.Store({
   modules: {
     skeleton,
-    identity,
+    // identity,
     title,
   },
   // 开启严格模式

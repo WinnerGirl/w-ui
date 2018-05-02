@@ -1,0 +1,54 @@
+@import "color";
+html::-webkit-scrollbar{width:0}
+body,div,span,header,footer,nav,section,aside,article,ul, li, a, p, h1, h2, h3, h4,h5, i, b, textarea, button, input, select, pre, code  {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  font-family: 'PingFangSC','Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  -webkit-tap-highlight-color:transparent;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+  -ms-overflow-style:none;
+  overflow:-moz-scrollbars-none;
+}
+html{
+  -webkit-overflow-scrolling : touch !important;
+  overflow: auto !important;
+  height: 100% !important;
+}
+body{
+  -webkit-overflow-scrolling : touch !important;
+  overflow: auto !important;
+  position: relative;
+  height:100% !important;
+  width:100%;
+  background: $c-bg-white;
+  font-size: 12px;
+}
+[v-cloak] {
+  display: none !important;
+}
+img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+a{
+  color: inherit;
+  font-size: inherit;
+}
+// 引入到全局样式
+@import "theme/box";
+@import "theme/icon";
+@import "theme/flex";
+@import "theme/float";
+@import "theme/fontSize";
+@import "theme/lineHeight";
+@import "theme/text";
+@import "theme/label";

@@ -1,0 +1,15 @@
+$values:(10) (12) (14) (15) (16) (18) (20) (22) (25) (30);
+@mixin generateBox(){
+  @each $val in $values{
+    $value: #{nth($val,1)};
+    .fs#{$value}{
+      font-size: #{$value}px;
+    }
+  }
+}
+//font-size
+@include generateBox();
+
+.fsb{
+  font-weight: 600;
+}

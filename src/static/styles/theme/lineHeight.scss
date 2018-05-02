@@ -1,0 +1,11 @@
+$values: (14) (24);
+@mixin generate(){
+  @each $val in $values{
+    $value: #{nth($val,1)};
+    .lh#{$value}{
+      line-height: #{$value}px;
+    }
+  }
+}
+//line-height
+@include generate();

@@ -1,0 +1,22 @@
+@import "../color";
+.label-list{
+  font-size: 0;
+  & > .label{
+    margin: 0 8px 8px 0;
+  }
+}
+
+.label {
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 6px 15px;
+  letter-spacing: 0;
+}
+.label-default{
+  background: $c-bg;
+  border-color: $c-light-border;
+  color: $c-gray;
+}

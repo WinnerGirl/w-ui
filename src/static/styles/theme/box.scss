@@ -1,0 +1,34 @@
+$values: (2) (4) (8) (10) (15) (20) (25) (30) (40) (50);
+@mixin generateBox($list){
+  @each $m in $list{
+    $type:nth($m, 1);
+    $key:nth($m, 2);
+    @each $val in $values{
+      $value: #{nth($val,1)};
+      .#{$type}#{$value}{
+        #{$key}: #{$value}px;
+      }
+    }
+  }
+}
+//margin
+@include generateBox($list:(ml margin-left) (mr margin-right) (mt margin-top) (mb margin-bottom));
+
+//padding
+@include generateBox($list:(pl padding-left) (pr padding-right) (pt padding-top) (pb padding-bottom));
+
+// display
+.dis-ib{
+  display: inline-block;
+}
+.dis-b{
+  display: block;
+}
+
+// position
+.pos-ab{
+  position: absolute;
+}
+.pos-re{
+  position: relative;
+}

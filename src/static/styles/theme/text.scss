@@ -1,0 +1,57 @@
+@import "../color";
+
+// 文字省略号
+.text-el{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-red{
+  color:$c-red;
+}
+.text-gray{
+  color: $c-gray;
+}
+.text-main{
+  color: $c-text;
+}
+.text-gray-light{
+  color: $c-text-light;
+}
+.text-sub{
+  color: $c-subtitle;
+}
+.text-white{
+  color: $c-white;
+}
+.text-blue{
+  color: $c-blue;
+}
+.text-title{
+  color: #808080;
+}
+
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+
+.text-underline{
+  text-decoration: underline;
+}
+/*
+* param line 要居中的文本行数
+*/
+@mixin tc($line){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:$line;
+}

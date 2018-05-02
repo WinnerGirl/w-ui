@@ -1,0 +1,22 @@
+.icon {
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 100%;
+  vertical-align: middle;
+}
+
+.icon-lg{
+  width:45px;
+  height: 45px;
+}
+.icon-sm{
+  height: 15px;
+  width: 15px;
+}
+.icon-size-normal{
+  background-size: auto !important;
+}

@@ -1,0 +1,22 @@
+.arrow{
+  position: absolute;
+  top:50%;
+  margin-top:-2.5px;
+  right:20px;
+  text-align: right;
+  color: #373737;
+  &:after{
+    content: " ";
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    border-width: 2px 2px 0 0;
+    border-color: #373737;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -2.5px;
+  }
+}
