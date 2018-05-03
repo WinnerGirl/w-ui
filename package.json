@@ -5,7 +5,8 @@
   "author": "",
   "private": true,
   "scripts": {
-    "demo": "cross-env TYPE=demo webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "demo": "cross-env TYPE=demo SERVER=local webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "api": "node api/main.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",

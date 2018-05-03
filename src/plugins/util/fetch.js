@@ -3,11 +3,12 @@ import {
   platform, version, baseUrl
 } from './global';
 
-const loading = Vue.prototype.$loading;
 const header = { 'Content-Type': 'application/x-www-form-urlencoded' };
 
 function fetchData() {
   async function getResponse(url, data, type, headers) {
+    const loading = Vue.prototype.$loading;
+    loading.start();
     data = Object.assign({}, data, {
       platform,
       version
@@ -102,12 +103,11 @@ function fetchData() {
   }
   return {
     // 'Content-Type': 'application/json'
+    // get(url = '', data = {}, headers = {'Content-Type': 'application/json'}) {
     get(url = '', data = {}, headers = header) {
-      loading.start();
       return getResponse(url, data, 'GET', headers);
     },
     post(url = '', data = {}, headers = header) {
-      loading.start();
       return getResponse(url, data, 'POST', headers);
     }
   };

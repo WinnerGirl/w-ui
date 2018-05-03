@@ -13,7 +13,7 @@ let env;
 const PORT = process.env.PORT && Number(process.env.PORT);
 // demo 环境
 if (process.env.TYPE === 'demo') {
-  env = require('../config/demo.env')
+  env = require('../config/dev.env')
 } else {
   env = process.env.SERVER === 'local'
     ? require('../config/local.env')

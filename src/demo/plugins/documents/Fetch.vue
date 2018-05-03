@@ -49,7 +49,7 @@
 </template>
 
 <script>
-  import { myFamilyInfo } from '../services/familyServices';
+  import { getDemoInfo } from '../services/demoServices';
   export default {
     data() {
       return {
@@ -60,7 +60,8 @@
     methods: {
       async getData() {
         this.open = true;
-        this.data = await myFamilyInfo();
+        this.data = await getDemoInfo();
+        console.log(this.data);
       },
       changeType() {
         this.open = !this.open;

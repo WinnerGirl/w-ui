@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  app.get('/app/student/info', function (req, res, next) {
+  app.get('/app/demo', function (req, res, next) {
     return res.send({
       code: 0,
       data: {
@@ -19,7 +19,7 @@ module.exports = function(app) {
         }],
         id: 2,
         inviteCount: 0,
-        name: '曹欢',
+        name: 'wxf',
         projectList: [{
           endTime: 1515487298000,
           endTimeStr: '2018-01-09',
@@ -53,17 +53,5 @@ module.exports = function(app) {
         }]
       }
     });
-  });
-  app.get('/app/myqr', function (req, res, next) {
-    setTimeout(function() {
-      return res.send({
-        code: 0,
-        data: {
-          value: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.dlkj.zcjh&json=%7B%22type%22%3A2%2C%22uuid%22%3A%224baa9c64-6aa0-45ea-88da-c7b28d7e4b67%22%7D',
-          face_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519634419123&di=4989059a0010c8741824c4cd783e9262&imgtype=0&src=http%3A%2F%2Fwww.feizl.com%2Fupload2007%2F2014_08%2F14080817124287.jpg',
-          name: '帅哥'
-        }
-      });
-    }, 1500);
   });
 };
